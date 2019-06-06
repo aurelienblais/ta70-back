@@ -1,0 +1,18 @@
+
+version: '3.4'
+services:
+
+  postgres:
+    image: postgres:10.0
+    container_name: ta70-back_postgres
+    ports:
+      - "5434:5432"
+    volumes:
+      - /data/ta70-back/postgres/data:/var/lib/postgresql/data/pgdata
+    environment:
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 10s
+      retries: 12
