@@ -14,3 +14,7 @@ development:
 
 production:
   <<: *default
+
+test:
+  <<: *default
+  database: test_db

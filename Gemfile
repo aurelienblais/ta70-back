@@ -16,10 +16,21 @@ gem 'rack-cors'
 gem 'devise-jwt'
 
 group :development, :test do
+  gem 'apipie-rails'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
 end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'rubocop'
 end
+
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
