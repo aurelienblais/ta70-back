@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'POST /sign_up', type: :request do
   let(:url) { '/users' }
   let(:params) do
     {
-        user: {
-            email:    'user@example.com',
-            password: 'password'
-        }
+      user: {
+        email: 'user@example.com',
+        password: 'password'
+      }
     }
   end
 
