@@ -12,6 +12,7 @@ gem 'rails', '~> 5.2.3'
 gem 'dotenv-rails'
 gem 'fast_jsonapi'
 
+gem 'rack-cors'
 gem 'devise-jwt'
 
 group :development, :test do
