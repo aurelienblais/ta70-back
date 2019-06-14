@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'POST /login', type: :request do
+RSpec.describe 'POST /sign_in', type: :request do
   let(:user) { FactoryBot.create(:user) }
   let(:url) { '/users/sign_in' }
   let(:params) do

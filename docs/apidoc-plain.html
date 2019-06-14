@@ -2,6 +2,10 @@
   <ul>
       <li><a href='#registrations-create'>create</a></li>
   </ul>
+  <h4><a href='#sessions'>Sessions</a></h4>
+  <ul>
+      <li><a href='#sessions-create'>create</a></li>
+  </ul>
 
 
 
@@ -74,6 +78,85 @@
       </small>
       
 <p>Password of the account to create</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="sessions">
+      <a href='#sessions'>Sessions</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="sessions-create">
+      <a href='#sessions'>Sessions</a> / <a href='#sessions-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/users/sign_in
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>email </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>E-mail of the account</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Password of the account</p>
 
     </li>
     
