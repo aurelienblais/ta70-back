@@ -1,24 +1,27 @@
+<p align="center">
+  <img width="638" height="134" src="https://image.noelshack.com/fichiers/2019/24/4/1560433822-logo.png">
+</p>
+
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version : 2.5.3
+* Require a working postgres instance (use docker-compose)
 
-Things you may want to cover:
+# Setup
 
-* Ruby version
+* `docker-compose up -d`
+* `rails db:setup`
+* `rails db:migrate`
+* `rails s`
+* Navigate to `localhost:3000`
 
-* System dependencies
+# Updating
+* `bundle`
+* `rails db:migrate`
 
-* Configuration
+# Running tests
+* `rspec`
 
-* Database creation
+# Api
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Api Doc is available here : https://aurelienblais.github.io/ta70-back/apidoc.html
