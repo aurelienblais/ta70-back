@@ -35,14 +35,35 @@ ActiveRecord::Schema.define(version: 20_190_614_111_525) do
     t.index ['user_id'], name: 'index_comments_on_user_id'
   end
 
+  create_table 'crawl_users', force: :cascade do |t|
+    t.bigint 'poi_id'
+    t.bigint 'user_id'
+    t.boolean 'accepted'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['poi_id'], name: 'index_crawl_users_on_poi_id'
+    t.index ['user_id'], name: 'index_crawl_users_on_user_id'
+  end
+
+  create_table 'crawls', force: :cascade do |t|
+    t.string 'name'
+    t.text 'description'
+    t.datetime 'event_date'
+    t.string 'status'
+    t.bigint 'user_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['user_id'], name: 'index_crawls_on_user_id'
+  end
+
   create_table 'events', force: :cascade do |t|
     t.string 'name'
     t.text 'description'
     t.datetime 'event_date'
-    t.bigint 'pub_id'
+    t.bigint 'poi_id'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['pub_id'], name: 'index_events_on_pub_id'
+    t.index ['poi_id'], name: 'index_events_on_poi_id'
   end
 
   create_table 'friendships', force: :cascade do |t|
@@ -64,64 +85,44 @@ ActiveRecord::Schema.define(version: 20_190_614_111_525) do
     t.string 'name'
     t.text 'description'
     t.float 'price'
-    t.bigint 'pub_id'
+    t.bigint 'poi_id'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['pub_id'], name: 'index_menu_items_on_pub_id'
+    t.index ['poi_id'], name: 'index_menu_items_on_poi_id'
   end
 
   create_table 'opening_hours', force: :cascade do |t|
     t.integer 'weekday'
     t.time 'opening'
     t.time 'closing'
-    t.bigint 'pub_id'
-    t.index ['pub_id'], name: 'index_opening_hours_on_pub_id'
+    t.bigint 'poi_id'
+    t.index ['poi_id'], name: 'index_opening_hours_on_poi_id'
   end
 
-  create_table 'pub_crawl_pubs', force: :cascade do |t|
-    t.bigint 'pub_id'
-    t.bigint 'pub_crawl_id'
-    t.index ['pub_crawl_id'], name: 'index_pub_crawl_pubs_on_pub_crawl_id'
-    t.index ['pub_id'], name: 'index_pub_crawl_pubs_on_pub_id'
+  create_table 'poi_crawls', force: :cascade do |t|
+    t.bigint 'poi_id'
+    t.bigint 'crawl_id'
+    t.index ['crawl_id'], name: 'index_poi_crawls_on_crawl_id'
+    t.index ['poi_id'], name: 'index_poi_crawls_on_poi_id'
   end
 
-  create_table 'pub_crawl_users', force: :cascade do |t|
-    t.bigint 'pub_id'
+  create_table 'poi_users', force: :cascade do |t|
+    t.bigint 'poi_id'
     t.bigint 'user_id'
     t.boolean 'accepted'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['pub_id'], name: 'index_pub_crawl_users_on_pub_id'
-    t.index ['user_id'], name: 'index_pub_crawl_users_on_user_id'
+    t.index ['poi_id'], name: 'index_poi_users_on_poi_id'
+    t.index ['user_id'], name: 'index_poi_users_on_user_id'
   end
 
-  create_table 'pub_crawls', force: :cascade do |t|
-    t.string 'name'
-    t.text 'description'
-    t.datetime 'event_date'
-    t.string 'status'
-    t.bigint 'user_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['user_id'], name: 'index_pub_crawls_on_user_id'
-  end
-
-  create_table 'pub_users', force: :cascade do |t|
-    t.bigint 'pub_id'
-    t.bigint 'user_id'
-    t.boolean 'accepted'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['pub_id'], name: 'index_pub_users_on_pub_id'
-    t.index ['user_id'], name: 'index_pub_users_on_user_id'
-  end
-
-  create_table 'pubs', force: :cascade do |t|
+  create_table 'pois', force: :cascade do |t|
     t.string 'name'
     t.string 'address'
     t.string 'coordinates'
     t.string 'phone'
     t.text 'description'
+    t.string 'family', default: 'pub'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
   end

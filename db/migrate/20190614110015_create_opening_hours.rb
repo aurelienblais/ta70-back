@@ -7,7 +7,7 @@ class CreateOpeningHours < ActiveRecord::Migration[5.2]
       t.time :opening
       t.time :closing
 
-      t.references :pub
+      t.references :poi
     end
   end
 end

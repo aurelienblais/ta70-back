@@ -7,7 +7,7 @@ class CreateMenuItem < ActiveRecord::Migration[5.2]
       t.text :description
       t.float :price
 
-      t.references :pub
+      t.references :poi
 
       t.timestamps
     end

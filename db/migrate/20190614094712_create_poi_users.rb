@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-class CreatePubUsers < ActiveRecord::Migration[5.2]
+class CreatePoiUsers < ActiveRecord::Migration[5.2]
   def change
-    create_table :pub_users do |t|
-      t.belongs_to :pub
+    create_table :poi_users do |t|
+      t.belongs_to :poi
       t.belongs_to :user
 
       t.boolean :accepted

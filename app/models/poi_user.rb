@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class PubUser < ApplicationRecord
+class PoiUser < ApplicationRecord
   belongs_to :user
-  belongs_to :pub
+  belongs_to :poi
 end

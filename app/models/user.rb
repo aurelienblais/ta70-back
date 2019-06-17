@@ -9,11 +9,11 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :friends, through: :friendships
 
-  has_many :pub_crawl_users
-  has_many :pub_crawls, through: :pub_crawl_users
+  has_many :crawl_users
+  has_many :crawls, through: :crawl_users
 
-  has_one :pub_user, required: false
-  has_one :pub, through: :pub_user, required: false
+  has_one :poi_user, required: false
+  has_one :poi, through: :poi_user, required: false
 
   validates_presence_of :firstname, :lastname
 
