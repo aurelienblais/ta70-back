@@ -2,4 +2,6 @@
 
 class OpeningHour < ApplicationRecord
   belongs_to :poi
+
+  scope :order_by_weekday, -> { order(:weekday) }
 end

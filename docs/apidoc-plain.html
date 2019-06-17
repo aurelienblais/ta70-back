@@ -1,6 +1,7 @@
   <h4><a href='#pois'>Pois</a></h4>
   <ul>
       <li><a href='#pois-index'>index</a></li>
+      <li><a href='#pois-show'>show</a></li>
   </ul>
   <h4><a href='#registrations'>Registrations</a></h4>
   <ul>
@@ -70,6 +71,57 @@
       </small>
       
 <p>User position longitude</p>
+
+    </li>
+    
+    <li>
+      <strong>family </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Type of POI, default to `bar`</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="pois-show">
+      <a href='#pois'>Pois</a> / <a href='#pois-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /pois/:id
+            <br>
+            <small>Return a single object</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a number.</p>
+ ]
+      </small>
+      
+<p>Id of the object</p>
 
     </li>
     
