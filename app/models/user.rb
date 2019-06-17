@@ -16,12 +16,4 @@ class User < ApplicationRecord
   has_one :poi, through: :poi_user, required: false
 
   validates_presence_of :firstname, :lastname
-
-  before_commit :set_role
-
-  private
-
-  def set_role
-    roles ||= 'user'
-  end
 end

@@ -17,6 +17,8 @@
 /storage/*
 !/storage/.keep
 
+.script
+
 .byebug_history
 
 /coverage/*

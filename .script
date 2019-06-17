@@ -1,0 +1,17 @@
+@client = GooglePlaces::Client.new 'AIzaSyCl54JyEv5NY0sT8yBHAF9h75At_85n-EQ'
+@city   = @client.spots(45.188529, 5.724524, :types => ['bar'], radius: 10000, detail: true)
+@city.each do |p|
+  poi = Poi.find_or_create_by!(
+      name:        p.name,
+      address:     p.formatted_address,
+      coordinates: "lat: #{p.lat}, lng: #{p.lng}",
+      phone:       p.formatted_phone_number,
+      family:      :bar,
+      description: ""
+  )
+
+  p.opening_hours['periods'].each do |oh|
+    OpeningHour.find_or_create_by!(weekday: oh['open']['day'].to_i, opening: Time.new(0, 1, 1, oh['open']['time'][0..1], oh['open']['time'][2..3]), poi: poi) if oh['open']
+    poi.opening_hours << OpeningHour.find_or_create_by!(weekday: oh['close']['day'].to_i, closing: Time.new(0, 1, 1, oh['close']['time'][0..1], oh['close']['time'][2..3]), poi: poi) if oh['close']
+  end if p.opening_hours && p.opening_hours['periods']
+end
