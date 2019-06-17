@@ -14,4 +14,14 @@ class User < ApplicationRecord
 
   has_one :pub_user, required: false
   has_one :pub, through: :pub_user, required: false
+
+  validates_presence_of :firstname, :lastname
+
+  before_commit :set_role
+
+  private
+
+  def set_role
+    roles ||= 'user'
+  end
 end

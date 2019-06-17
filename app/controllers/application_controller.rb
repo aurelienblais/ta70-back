@@ -2,6 +2,8 @@
 
 class ApplicationController < ActionController::API
   before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
   def render_resource(resource)
     if resource.errors.empty?
       render json: resource
@@ -22,6 +24,11 @@ class ApplicationController < ActionController::API
       ]
     }, status:   :bad_request
   end
-end
 
-# https://medium.com/@mazik.wyry/rails-5-api-jwt-setup-in-minutes-using-devise-71670fd4ed03
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[firstname lastname])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[firstname lastname])
+  end
+end

@@ -8,6 +8,20 @@ class Users::SessionsController < Devise::SessionsController
     param :email, String, required: true, desc: 'E-mail of the account'
     param :password, String, required: true, desc: 'Password of the account'
   end
+  returns code: 200 do
+    property :id, :number, desc: 'User id'
+    property :email, String, desc: 'User email'
+    property :firstname, String, desc: 'User firstname'
+    property :lastname, String, desc: 'User lastname'
+    property :Authorization, String, desc: '[Header] Bearer for next requests'
+  end
+  returns code: 400 do
+    property :errors, Hash, desc: 'Error details' do
+      property :status, String, desc: 'Error code'
+      property :title, String, desc: 'Error title'
+      property :detail, Hash, desc: 'Error per field'
+    end
+  end
   def create
     super
   end
