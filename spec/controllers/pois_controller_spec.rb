@@ -11,6 +11,11 @@ describe PoisController do
       get :index, params: { lat: object.lat, lng: object.lng }
       expect(response.body).to include object.name
     end
+
+    it 'returns error' do
+      get :index
+      expect(response.status).to eq 400
+    end
   end
 
   describe 'GET #show' do
@@ -18,6 +23,11 @@ describe PoisController do
       object = FactoryBot.create :poi
       get :show, params: { id: object.id }
       expect(response.body).to include object.name
+    end
+
+    it 'returns error' do
+      get :show, params: { id: 999_999 }
+      expect(response.status).to eq 404
     end
   end
 end

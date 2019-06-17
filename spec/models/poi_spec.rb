@@ -17,5 +17,9 @@ describe Poi do
   end
 
   describe 'Methods' do
+    it 'returns parsed opening hours' do
+      @object.opening_hours << FactoryBot.create(:opening_hour)
+      expect(@object.parsed_opening_hours).to eq([{ 1 => [{ opening: '06:00' }] }])
+    end
   end
 end

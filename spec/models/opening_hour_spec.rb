@@ -22,4 +22,15 @@ describe OpeningHour do
       expect(@object.weekday).to be_between 0, 6
     end
   end
+
+  describe 'Methods' do
+    it 'returns only opening time' do
+      expect(@object.opening).to eq(@object[:opening].strftime('%H:%M'))
+    end
+
+    it 'returns only closing time' do
+      @object = FactoryBot.create(:closed_hour)
+      expect(@object.closing).to eq(@object[:closing].strftime('%H:%M'))
+    end
+  end
 end

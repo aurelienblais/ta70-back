@@ -9,6 +9,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.3'
 
+gem 'apipie-rails'
 gem 'dotenv-rails'
 gem 'fast_jsonapi'
 gem 'geocoder'
@@ -17,7 +18,6 @@ gem 'devise-jwt'
 gem 'rack-cors'
 
 group :development, :test do
-  gem 'apipie-rails'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
 end

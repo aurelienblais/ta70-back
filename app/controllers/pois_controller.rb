@@ -15,6 +15,13 @@ class PoisController < ApplicationController
       property :lng, :number, desc: 'POI longitude'
     end
   end
+  returns code: 400, desc: 'Raised if a params is missing' do
+    property :errors, Hash, desc: 'Error details' do
+      property :status, String, desc: 'Error code'
+      property :title, String, desc: 'Error title'
+      property :detail, Hash, desc: 'Error per field'
+    end
+  end
 
   def index
     render json: PoiShortSerializer.new(Poi.where(family: params[:family] || 'bar').near([params[:lat], params[:lng]], 2, unit: :km)).serialized_json
@@ -32,10 +39,11 @@ class PoisController < ApplicationController
       property :lat, :number, desc: 'POI latitude'
       property :lng, :number, desc: 'POI longitude'
 
-      property :opening_hours, Array do
-        property :weekday, :number, desc: 'Number of the day (0..6)'
-        property :opening, String, desc: 'Opening time'
-        property :closing, String, desc: 'Closing time'
+      property :parsed_opening_hours, Array do
+        property :weekday, Array, desc: 'Number of the day (0..6)' do
+          property :opening, String, desc: 'Opening time'
+          property :closing, String, desc: 'Closing time'
+        end
       end
 
       property :menu_items, Array do
@@ -65,6 +73,6 @@ class PoisController < ApplicationController
           .find(params[:id])
     ).serializable_hash
   rescue ActiveRecord::RecordNotFound
-    render json: { errors: { status: 404, title: 'Not found', detail: "Object with id #{params[:id]} not found" } }
+    render json: { errors: { status: 404, title: 'Not found', detail: "Object with id #{params[:id]} not found" } }, status: :not_found
   end
 end
