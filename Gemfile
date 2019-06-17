@@ -30,6 +30,10 @@ group :test do
 end
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
   gem 'google_places'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
