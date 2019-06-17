@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 20_190_614_111_525) do
   end
 
   create_table 'crawl_users', force: :cascade do |t|
-    t.bigint 'poi_id'
+    t.bigint 'crawl_id'
     t.bigint 'user_id'
     t.boolean 'accepted'
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['poi_id'], name: 'index_crawl_users_on_poi_id'
+    t.index ['crawl_id'], name: 'index_crawl_users_on_crawl_id'
     t.index ['user_id'], name: 'index_crawl_users_on_user_id'
   end
 
