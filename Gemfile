@@ -15,6 +15,7 @@ gem 'fast_jsonapi'
 gem 'geocoder'
 
 gem 'devise-jwt'
+gem 'pundit'
 gem 'rack-cors'
 
 group :development, :test do

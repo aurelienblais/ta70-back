@@ -4,6 +4,9 @@
 require 'spec_helper'
 require 'database_cleaner'
 require 'simplecov'
+require 'devise'
+require 'devise/jwt/test_helpers'
+
 SimpleCov.start 'rails'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
@@ -38,6 +41,7 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   # Factory bot bindings
   config.include FactoryBot::Syntax::Methods
