@@ -17,7 +17,11 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div id='container'>
-          <h4><a href='#registrations'>Registrations</a></h4>
+          <h4><a href='#pois'>Pois</a></h4>
+  <ul>
+      <li><a href='#pois-index'>index</a></li>
+  </ul>
+  <h4><a href='#registrations'>Registrations</a></h4>
   <ul>
       <li><a href='#registrations-create'>create</a></li>
   </ul>
@@ -34,6 +38,111 @@
 
 <hr>
 
+
+  <ul class='breadcrumb'  id='pois'>
+    <li><a href='#'>TA70</a><span class='divider'>/</span></li>
+    <li class='active'>Pois</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#pois'>Pois</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='pois-index'>
+        <li>
+          <a href='#'>TA70</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#pois'>Pois</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>index</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#pois-index'>
+              GET /pois
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>lat </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>User position latitude</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>lng </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>User position longitude</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
 
   <ul class='breadcrumb'  id='registrations'>
     <li><a href='#'>TA70</a><span class='divider'>/</span></li>
