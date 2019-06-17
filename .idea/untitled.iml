@@ -62,6 +62,7 @@
     <orderEntry type="library" scope="PROVIDED" name="factory_bot_rails (v5.0.2, RVM: ruby-2.5.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="fast_jsonapi (v1.5, RVM: ruby-2.5.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.11.1, RVM: ruby-2.5.3) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.5.1, RVM: ruby-2.5.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, RVM: ruby-2.5.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="google_places (v1.2.0, RVM: ruby-2.5.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httparty (v0.17.0, RVM: ruby-2.5.3) [gem]" level="application" />

@@ -17,11 +17,5 @@ describe Poi do
   end
 
   describe 'Methods' do
-    it 'returns latitude' do
-      expect(@object.lat).to eq(10.0)
-    end
-    it 'returns longitude' do
-      expect(@object.lng).to eq(12.2)
-    end
   end
 end

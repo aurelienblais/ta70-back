@@ -2,31 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebf6d315-f28d-455c-8d12-b8358d51c8a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/spec/factories/comment.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/comment_thread.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/crawl.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/crawl_user.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/event.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/friendship.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/menu_item.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/opening_hour.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/poi.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/poi_crawl.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/poi_user.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/comment_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/comment_thread_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/crawl_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/crawl_user_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/event_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/friendship_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/menu_item_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/opening_hour_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/poi_crawl_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/poi_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/poi_user_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190614110937_create_crawl_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190614110937_create_crawl_users.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pois_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pois_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/poi.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/poi.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/poi.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/poi.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/poi_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/poi_spec.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,37 +86,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/factories/poi_user.rb">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/models/poi_user_spec.rb">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20190617123218_update_coordinates_poi.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+            <state relative-caret-position="195">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/factories/poi_crawl.rb">
+        <entry file="file://$PROJECT_DIR$/spec/factories/poi.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="165">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/models/poi_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/poi.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spec/models/poi_crawl_spec.rb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/pois_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="45">
+              <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/factories/poi_user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -141,6 +162,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>medium</find>
+      <find>coordinates</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,9 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/spec/controllers/users/sessions_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/apipie.rb" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/config/database.yml.travis" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
@@ -171,20 +190,16 @@
         <option value="$PROJECT_DIR$/app/models/poi_user.rb" />
         <option value="$PROJECT_DIR$/app/models/crawl.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/app/models/poi.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/opening_hour.rb" />
         <option value="$PROJECT_DIR$/.script" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/spec/factories/comment.rb" />
         <option value="$PROJECT_DIR$/spec/factories/comment_thread.rb" />
-        <option value="$PROJECT_DIR$/spec/factories/poi.rb" />
         <option value="$PROJECT_DIR$/spec/models/opening_hour_spec.rb" />
         <option value="$PROJECT_DIR$/spec/factories/opening_hour.rb" />
         <option value="$PROJECT_DIR$/spec/models/comment_spec.rb" />
         <option value="$PROJECT_DIR$/spec/models/comment_thread_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/poi_spec.rb" />
         <option value="$PROJECT_DIR$/spec/factories/crawl.rb" />
         <option value="$PROJECT_DIR$/spec/models/crawl_spec.rb" />
         <option value="$PROJECT_DIR$/spec/factories/crawl_user.rb" />
@@ -200,6 +215,13 @@
         <option value="$PROJECT_DIR$/spec/models/poi_user_spec.rb" />
         <option value="$PROJECT_DIR$/spec/factories/poi_crawl.rb" />
         <option value="$PROJECT_DIR$/spec/models/poi_crawl_spec.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190617122802_update_coordinates_poi.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190617123218_update_coordinates_poi.rb" />
+        <option value="$PROJECT_DIR$/spec/models/poi_spec.rb" />
+        <option value="$PROJECT_DIR$/spec/factories/poi.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/models/poi.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/pois_controller.rb" />
       </list>
     </option>
   </component>
@@ -233,20 +255,18 @@
             <path>
               <item name="ta70-back" type="b2602c69:ProjectViewProjectNode" />
               <item name="ta70-back" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ta70-back" type="b2602c69:ProjectViewProjectNode" />
               <item name="ta70-back" type="462c0819:PsiDirectoryNode" />
-              <item name="spec" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ta70-back" type="b2602c69:ProjectViewProjectNode" />
               <item name="ta70-back" type="462c0819:PsiDirectoryNode" />
               <item name="spec" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ta70-back" type="b2602c69:ProjectViewProjectNode" />
@@ -415,13 +435,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17171000" />
+    <option name="totallyTimeSpent" value="17854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -434,13 +454,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32961586" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4985694" visible="true" weight="0.3283767" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4985694" visible="true" weight="0.3283767" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50143063" side_tool="true" weight="0.3288889" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32961586" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.23748212" />
+      <window_info anchor="right" id="Database" order="3" weight="0.23748212" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,61 +478,13 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ta70_back@Development__untitled.rcov" NAME="Development: untitled Coverage Results" MODIFIED="1560752333303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
+    <SUITE FILE_PATH="coverage/ta70_back@Development__untitled.rcov" NAME="Development: untitled Coverage Results" MODIFIED="1560775328924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
     <SUITE FILE_PATH="coverage/untitled@Development__untitled.rcov" NAME="Development: untitled Coverage Results" MODIFIED="1559830807652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="untitled" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://e180c56f-b838-4361-8e96-e7176a67683d/database/ta70_back_dev/schema/public/table/pubs">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="991d86dd-c4e2-47a9-bd76-f4c6c63c37ab">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190614093734_create_friendships.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.3/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/active_support.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190614094545_create_poi.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190617072836_rename_pub_crawl_pub_to_poi_crawl.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190617072906_rename_pub_crawl_user_to_crawl_user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190617072931_rename_pub_user_to_poi_user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190617072836_rename_pub_crawl_pub_to_poi_crawl.rb" />
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190617072906_rename_pub_crawl_user_to_crawl_user.rb" />
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190617072931_rename_pub_user_to_poi_user.rb" />
     <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -592,35 +564,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://e180c56f-b838-4361-8e96-e7176a67683d/database/ta70_back_dev/schema/public/table/opening_hours">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="991d86dd-c4e2-47a9-bd76-f4c6c63c37ab">
           <filtering>
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://e180c56f-b838-4361-8e96-e7176a67683d/database/ta70_back_dev/schema/public/table/pois">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="991d86dd-c4e2-47a9-bd76-f4c6c63c37ab">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/poi.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -694,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/poi.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/factories/opening_hour.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -712,13 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-311">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/poi_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -799,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/poi_user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/poi_user_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -824,6 +752,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190617122802_update_coordinates_poi.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://e180c56f-b838-4361-8e96-e7176a67683d/database/ta70_back_dev/schema/public/table/pois">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="991d86dd-c4e2-47a9-bd76-f4c6c63c37ab">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190617123218_update_coordinates_poi.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/poi_user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/poi.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/poi_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/poi.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pois_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="56" lean-forward="true" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
         </state>
       </provider>
     </entry>

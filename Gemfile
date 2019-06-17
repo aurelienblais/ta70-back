@@ -11,6 +11,7 @@ gem 'rails', '~> 5.2.3'
 
 gem 'dotenv-rails'
 gem 'fast_jsonapi'
+gem 'geocoder'
 
 gem 'devise-jwt'
 gem 'rack-cors'
