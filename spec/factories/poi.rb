@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :poi do
     sequence(:name) { |n| "Name #{n}" }
     sequence(:address) { |n| "Address #{n}" }
-    sequence(:coordinates) { |n| "Coordinates #{n}" }
+    coordinates { '10.0 12.2' }
     sequence(:phone) { |n| "Phone #{n}" }
     sequence(:description) { |n| "Description #{n}" }
     family { :bar }

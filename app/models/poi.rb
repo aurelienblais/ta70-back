@@ -14,4 +14,12 @@ class Poi < ApplicationRecord
   has_many :crawls, through: :poi_crawls
 
   validates_presence_of :name, :coordinates
+
+  def lat
+    @lat ||= coordinates.split(' ')[0].to_f
+  end
+
+  def lng
+    @lng ||= coordinates.split(' ')[1].to_f
+  end
 end
