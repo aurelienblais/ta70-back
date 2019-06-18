@@ -20,6 +20,7 @@
           <h4><a href='#crawls'>Crawls</a></h4>
   <ul>
       <li><a href='#crawls-index'>index</a></li>
+      <li><a href='#crawls-show'>show</a></li>
       <li><a href='#crawls-create'>create</a></li>
       <li><a href='#crawls-update'>update</a></li>
       <li><a href='#crawls-destroy'>destroy</a></li>
@@ -80,6 +81,34 @@
           <h3>
             <a href='#crawls-index'>
               GET /crawls
+            </a><br>
+            <small></small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='crawls-show'>
+        <li>
+          <a href='#'>TA70</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#crawls'>Crawls</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>show</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#crawls-show'>
+              GET /crawls/:id
             </a><br>
             <small></small>
           </h3>
@@ -309,7 +338,7 @@
     <td>
       <strong>crawl[name] </strong><br>
       <small>
-        required
+        optional
         
       </small>
     </td>

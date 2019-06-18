@@ -29,6 +29,41 @@ describe CrawlsController do
     end
   end
 
+  describe 'GET #show' do
+    context 'user is logged' do
+      it 'returns crawl' do
+        object = FactoryBot.create :crawl
+
+        user         = object.user
+        headers      = { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
+        auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, user)
+        request.headers.merge! auth_headers
+
+        get :show, params: { id: object.id }
+
+        expect(response.status).to eq 200
+      end
+    end
+
+    it 'returns 404' do
+      user         = FactoryBot.create :user
+      headers      = { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
+      auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, user)
+      request.headers.merge! auth_headers
+
+      get :show, params: { id: 999_999 }
+
+      expect(response.status).to eq 404
+    end
+
+    context 'user is not logged' do
+      it 'returns error' do
+        get :show, params: { id: FactoryBot.create(:crawl).id }
+        expect(response.status).to eq 401
+      end
+    end
+  end
+
   describe 'POST #create' do
     context 'user is logged' do
       it 'returns created crawls' do

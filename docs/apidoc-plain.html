@@ -1,6 +1,7 @@
   <h4><a href='#crawls'>Crawls</a></h4>
   <ul>
       <li><a href='#crawls-index'>index</a></li>
+      <li><a href='#crawls-show'>show</a></li>
       <li><a href='#crawls-create'>create</a></li>
       <li><a href='#crawls-update'>update</a></li>
       <li><a href='#crawls-destroy'>destroy</a></li>
@@ -42,6 +43,25 @@
       <div>
           <h4>
               GET /crawls
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="crawls-show">
+      <a href='#crawls'>Crawls</a> / <a href='#crawls-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /crawls/:id
             <br>
             <small></small>
           </h4>
@@ -180,7 +200,7 @@
     <li>
       <strong>name </strong>:
       <small>
-        required
+        optional
         
           [ 
 <p>Must be a String</p>

@@ -29,14 +29,14 @@
     </a>
     <span class='divider'>/</span>
   </li>
-  <li class='active'>update</li>
+  <li class='active'>show</li>
   
 
 </ul>
 
   <div class='page-header'>
     <h1>
-      PATCH /crawls/:id
+      GET /crawls/:id
       <br>
       <small></small>
     </h1>
@@ -50,140 +50,10 @@
 
 
 
-  <h2>Params</h2>
-  <table class='table'>
-    <thead>
-      <tr>
-        <th>Param name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr style='background-color:rgb(255,255,255);'>
-    <td>
-      <strong>crawl </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a Hash</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-    <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>crawl[name] </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Name of the crawl</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a String</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>crawl[description] </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Description of the crawl</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a String</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>crawl[event_date] </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Date of the crawl</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a String</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-  <tr style='background-color:rgb(250,250,250);'>
-    <td>
-      <strong>crawl[status] </strong><br>
-      <small>
-        optional
-        
-      </small>
-    </td>
-    <td>
-      
-<p>Status of the crawl</p>
-
-        <p><strong>Validations:</strong></p>
-        <ul>
-            <li>
-<p>Must be a String</p>
-</li>
-        </ul>
-
-    </td>
-
-  </tr>
-
-  
-
-
-    </tbody>
-  </table>
   <h2><span class="translation_missing" title="translation missing: en.apipie.returns">Returns</span></h2>
     <h3>Code: 200</h3>
       <h4>Description:</h4>
-      <p>Return updated crawl</p>
+      <p>Return crawl</p>
     <table class='table'>
       <thead>
         <tr>
@@ -386,9 +256,9 @@
 
       </tbody>
     </table>
-    <h3>Code: [400, 401, 403, 404]</h3>
+    <h3>Code: [401, 404]</h3>
       <h4>Description:</h4>
-      <p>Raised if an error occured</p>
+      <p>Raised if a params is missing</p>
     <table class='table'>
       <thead>
         <tr>

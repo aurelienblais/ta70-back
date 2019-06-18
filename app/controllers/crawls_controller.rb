@@ -22,6 +22,30 @@ class CrawlsController < ApplicationController
     render json: CrawlShortSerializer.new(Crawl.all, params: { current_user: current_user }).serialized_json
   end
 
+  api :GET, '/crawls/:id'
+  returns code: 200, desc: 'Return crawl' do
+    property :name, String, desc: 'Name of the crawl'
+    property :description, String, desc: 'Description of the crawl'
+    property :event_date, String, desc: 'Date of the crawl'
+    property :status, String, desc: 'Status of the crawl'
+    property :owner, Hash do
+      property :id, :number, desc: 'Owner id'
+      property :name, String, desc: 'Owner name'
+    end
+    property :is_owner, :boolean, desc: 'Is crawl owned by current user'
+  end
+  returns code: [401, 404], desc: 'Raised if a params is missing' do
+    property :errors, Hash, desc: 'Error details' do
+      property :status, String, desc: 'Error code'
+      property :title, String, desc: 'Error title'
+      property :detail, Hash, desc: 'Error per field'
+    end
+  end
+
+  def show
+    render json: CrawlSerializer.new(Crawl.find(params[:id]), params: { current_user: current_user }).serializable_hash
+  end
+
   api :POST, '/crawls'
   param :crawl, Hash do
     param :name, String, desc: 'Name of the crawl', required: true
@@ -30,7 +54,7 @@ class CrawlsController < ApplicationController
     param :status, String, desc: 'Status of the crawl'
   end
   returns code: 200, desc: 'Return created crawl' do
-    property :name, String, desc: 'Name of the crawl', required: true
+    property :name, String, desc: 'Name of the crawl'
     property :description, String, desc: 'Description of the crawl'
     property :event_date, String, desc: 'Date of the crawl'
     property :status, String, desc: 'Status of the crawl'
@@ -55,13 +79,13 @@ class CrawlsController < ApplicationController
 
   api :PATCH, '/crawls/:id'
   param :crawl, Hash do
-    param :name, String, desc: 'Name of the crawl', required: true
+    param :name, String, desc: 'Name of the crawl'
     param :description, String, desc: 'Description of the crawl'
     param :event_date, String, desc: 'Date of the crawl'
     param :status, String, desc: 'Status of the crawl'
   end
   returns code: 200, desc: 'Return updated crawl' do
-    property :name, String, desc: 'Name of the crawl', required: true
+    property :name, String, desc: 'Name of the crawl'
     property :description, String, desc: 'Description of the crawl'
     property :event_date, String, desc: 'Date of the crawl'
     property :status, String, desc: 'Status of the crawl'
