@@ -13,7 +13,7 @@ class Users::SessionsController < Devise::SessionsController
     property :email, String, desc: 'User email'
     property :firstname, String, desc: 'User firstname'
     property :lastname, String, desc: 'User lastname'
-    property :Authorization, String, desc: '[Header] Bearer for next requests'
+    property :token, String, desc: 'Token for next requests'
   end
   returns code: 400 do
     property :errors, Hash, desc: 'Error details' do
@@ -29,7 +29,7 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def respond_with(resource, _opts = {})
-    render json: resource
+    render json: resource.as_json.merge(token: request.env['warden-jwt_auth.token'])
   end
 
   def respond_to_on_destroy
