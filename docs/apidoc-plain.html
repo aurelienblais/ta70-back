@@ -6,6 +6,12 @@
       <li><a href='#crawls-update'>update</a></li>
       <li><a href='#crawls-destroy'>destroy</a></li>
   </ul>
+  <h4><a href='#poi_crawls'>Poi crawls</a></h4>
+  <ul>
+      <li><a href='#poi_crawls-index'>index</a></li>
+      <li><a href='#poi_crawls-create'>create</a></li>
+      <li><a href='#poi_crawls-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#pois'>Pois</a></h4>
   <ul>
       <li><a href='#pois-index'>index</a></li>
@@ -267,6 +273,109 @@
       <div>
           <h4>
               DELETE /crawls/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="poi_crawls">
+      <a href='#poi_crawls'>Poi crawls</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="poi_crawls-index">
+      <a href='#poi_crawls'>Poi crawls</a> / <a href='#poi_crawls-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /crawls/:crawl_id/poi_crawls
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="poi_crawls-create">
+      <a href='#poi_crawls'>Poi crawls</a> / <a href='#poi_crawls-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /crawls/:crawl_id/poi_crawls/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>poi_craw </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>poi_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a number.</p>
+ ]
+      </small>
+      
+<p>id of the POI to add at this crawl</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="poi_crawls-destroy">
+      <a href='#poi_crawls'>Poi crawls</a> / <a href='#poi_crawls-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /crawls/:crawl_id/poi_crawls/:id
             <br>
             <small></small>
           </h4>

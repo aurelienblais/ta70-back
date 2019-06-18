@@ -11,7 +11,7 @@ describe CrawlsController do
         object = FactoryBot.create :crawl
 
         user         = object.user
-        headers      = { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
+        headers      = { 'Accept' => 'applicatilon/json', 'Content-Type' => 'application/json' }
         auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, user)
         request.headers.merge! auth_headers
 

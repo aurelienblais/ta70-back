@@ -9,5 +9,7 @@ Rails.application.routes.draw do
                registrations: 'users/registrations'
              }
   resources :pois
-  resources :crawls
+  resources :crawls do
+    resources :poi_crawls
+  end
 end
