@@ -7,7 +7,7 @@ class CrawlsController < ApplicationController
     property :attributes, Hash do
       property :name, String, desc: 'Crawl name'
       property :description, String, desc: 'Crawl description'
-      property :owner, :boolean, desc: 'Is crawl owned by current user'
+      property :is_owner, :boolean, desc: 'Is crawl owned by current user'
     end
   end
   returns code: [400, 401], desc: 'Raised if a params is missing' do
@@ -38,7 +38,7 @@ class CrawlsController < ApplicationController
       property :id, :number, desc: 'Owner id'
       property :name, String, desc: 'Owner name'
     end
-    property :owner, :boolean, desc: 'Is crawl owned by current user'
+    property :is_owner, :boolean, desc: 'Is crawl owned by current user'
   end
   returns code: [400, 401], desc: 'Raised if a params is missing' do
     property :errors, Hash, desc: 'Error details' do
@@ -69,7 +69,7 @@ class CrawlsController < ApplicationController
       property :id, :number, desc: 'Owner id'
       property :name, String, desc: 'Owner name'
     end
-    property :owner, :boolean, desc: 'Is crawl owned by current user'
+    property :is_owner, :boolean, desc: 'Is crawl owned by current user'
   end
   returns code: [400, 401, 403, 404], desc: 'Raised if an error occured' do
     property :errors, Hash, desc: 'Error details' do

@@ -4,7 +4,7 @@ class CrawlShortSerializer
   include FastJsonapi::ObjectSerializer
   attributes :name, :description
 
-  attributes :owner do |crawl, params|
+  attributes :is_owner do |crawl, params|
     params[:current_user] == crawl.user
   end
 end
