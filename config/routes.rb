@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   resources :pois
   resources :crawls do
     resources :poi_crawls
+    resources :crawl_users
   end
 end

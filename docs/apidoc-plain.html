@@ -1,3 +1,9 @@
+  <h4><a href='#crawl_users'>Crawl users</a></h4>
+  <ul>
+      <li><a href='#crawl_users-create'>create</a></li>
+      <li><a href='#crawl_users-update'>update</a></li>
+      <li><a href='#crawl_users-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#crawls'>Crawls</a></h4>
   <ul>
       <li><a href='#crawls-index'>index</a></li>
@@ -27,6 +33,141 @@
   </ul>
 
 
+
+  <hr/>
+
+  <div>
+    <h2 id="crawl_users">
+      <a href='#crawl_users'>Crawl users</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="crawl_users-create">
+      <a href='#crawl_users'>Crawl users</a> / <a href='#crawl_users-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /crawls/:crawl_id/crawl_users/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>craw_user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>user_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a number.</p>
+ ]
+      </small>
+      
+<p>id of the user to add at this crawl</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="crawl_users-update">
+      <a href='#crawl_users'>Crawl users</a> / <a href='#crawl_users-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /crawls/:crawl_id/crawl_users/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>craw_user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>user_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a number.</p>
+ ]
+      </small>
+      
+<p>id of the user to add at this crawl</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="crawl_users-destroy">
+      <a href='#crawl_users'>Crawl users</a> / <a href='#crawl_users-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /crawls/:crawl_id/crawl_users/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
 
   <hr/>
 
@@ -227,8 +368,6 @@
  ]
       </small>
       
-<p>Description of the crawl</p>
-
     </li>
     
     <li>

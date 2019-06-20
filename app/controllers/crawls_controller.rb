@@ -80,7 +80,7 @@ class CrawlsController < ApplicationController
   api :PATCH, '/crawls/:id'
   param :crawl, Hash do
     param :name, String, desc: 'Name of the crawl'
-    param :description, String, desc: 'Description of the crawl'
+    param :description, String, deslc: 'Description of the crawl'
     param :event_date, String, desc: 'Date of the crawl'
     param :status, String, desc: 'Status of the crawl'
   end
