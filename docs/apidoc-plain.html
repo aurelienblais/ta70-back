@@ -1,3 +1,9 @@
+  <h4><a href='#crawl_users'>Crawl users</a></h4>
+  <ul>
+      <li><a href='#crawl_users-create'>create</a></li>
+      <li><a href='#crawl_users-update'>update</a></li>
+      <li><a href='#crawl_users-destroy'>destroy</a></li>
+  </ul>
   <h4><a href='#crawls'>Crawls</a></h4>
   <ul>
       <li><a href='#crawls-index'>index</a></li>
@@ -5,6 +11,14 @@
       <li><a href='#crawls-create'>create</a></li>
       <li><a href='#crawls-update'>update</a></li>
       <li><a href='#crawls-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#friendships'>Friendships</a></h4>
+  <ul>
+      <li><a href='#friendships-index'>index</a></li>
+      <li><a href='#friendships-waiting'>waiting</a></li>
+      <li><a href='#friendships-create'>create</a></li>
+      <li><a href='#friendships-update'>update</a></li>
+      <li><a href='#friendships-destroy'>destroy</a></li>
   </ul>
   <h4><a href='#poi_crawls'>Poi crawls</a></h4>
   <ul>
@@ -27,6 +41,141 @@
   </ul>
 
 
+
+  <hr/>
+
+  <div>
+    <h2 id="crawl_users">
+      <a href='#crawl_users'>Crawl users</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="crawl_users-create">
+      <a href='#crawl_users'>Crawl users</a> / <a href='#crawl_users-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /crawls/:crawl_id/crawl_users/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>craw_user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>user_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a number.</p>
+ ]
+      </small>
+      
+<p>id of the user to add at this crawl</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="crawl_users-update">
+      <a href='#crawl_users'>Crawl users</a> / <a href='#crawl_users-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /crawls/:crawl_id/crawl_users/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>craw_user </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>user_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a number.</p>
+ ]
+      </small>
+      
+<p>id of the user to add at this crawl</p>
+
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="crawl_users-destroy">
+      <a href='#crawl_users'>Crawl users</a> / <a href='#crawl_users-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /crawls/:crawl_id/crawl_users/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
 
   <hr/>
 
@@ -273,6 +422,175 @@
       <div>
           <h4>
               DELETE /crawls/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="friendships">
+      <a href='#friendships'>Friendships</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="friendships-index">
+      <a href='#friendships'>Friendships</a> / <a href='#friendships-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /friendships
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="friendships-waiting">
+      <a href='#friendships'>Friendships</a> / <a href='#friendships-waiting'>waiting</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /friendships/waiting
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr/>
+
+      <h3 id="friendships-create">
+      <a href='#friendships'>Friendships</a> / <a href='#friendships-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /friendships
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>friendship </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>email </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="friendships-update">
+      <a href='#friendships'>Friendships</a> / <a href='#friendships-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PATCH /friendships/:id
+            <br>
+            <small></small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>friendship </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Hash</p>
+ ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>accepted </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be one of: <code>true</code>, <code>false</code>.</p>
+ ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="friendships-destroy">
+      <a href='#friendships'>Friendships</a> / <a href='#friendships-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /friendships/:id
             <br>
             <small></small>
           </h4>

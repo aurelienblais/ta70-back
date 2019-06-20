@@ -18,6 +18,16 @@ describe Friendship do
     it { should belong_to(:friend) }
   end
 
-  describe 'Validations' do
+  describe 'Methods' do
+    it 'returns waiting' do
+      @object.update_attributes(accepted: false)
+      expect(Friendship.waiting_for(@object.friend)).to include @object
+      expect(Friendship.friend_for(@object.friend)).to eq []
+    end
+
+    it 'returns friends' do
+      expect(Friendship.friend_for(@object.friend)).to include @object
+      expect(Friendship.waiting_for(@object.friend)).to eq []
+    end
   end
 end

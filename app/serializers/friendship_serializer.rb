@@ -6,11 +6,11 @@ class FriendshipSerializer
   attributes :friend do |friendship, params|
     if params[:current_user] == friendship.user
       {
-        name: friendship.user.name
+        name: friendship.friend.name
       }
     else
       {
-        name: friendship.friend.name
+        name: friendship.user.name
       }
     end
   end
