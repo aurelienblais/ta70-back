@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   resources :crawls do
     resources :poi_crawls
   end
+  resources :friendships do
+    get 'waiting', on: :collection
+  end
 end
