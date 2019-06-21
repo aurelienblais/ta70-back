@@ -10,4 +10,8 @@ class PoiSerializer
 
   # Relations
   attributes :menu_items, :events
+
+  attribute :comment_thread do |poi|
+    CommentThreadShortSerializer.new(poi.comment_thread).serialized_json
+  end
 end
