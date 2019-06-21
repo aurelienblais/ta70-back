@@ -13,4 +13,7 @@ Rails.application.routes.draw do
     resources :poi_crawls
     resources :crawl_users
   end
+  resources :comment_threads do
+    resources :comments
+  end
 end

@@ -5,6 +5,10 @@ class CommentSerializer
   # Attributes
   attributes :comment, :note, :created_at
 
-  # Relations
-  attributes :user
+  attributes :user do |comment|
+    {
+      id: comment.user_id,
+      name: comment.user.name
+    }
+  end
 end
