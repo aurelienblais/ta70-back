@@ -69,7 +69,7 @@ class PoisController < ApplicationController
     render json: PoiSerializer.new(
       Poi.eager_load(:opening_hours, :events, :menu_items)
           .merge(OpeningHour.order_by_weekday)
-          .merge(Event.only_upcoming.order_by_date)
+          .merge(Event.order_by_date)
           .find(params[:id])
     ).serializable_hash
   rescue ActiveRecord::RecordNotFound
