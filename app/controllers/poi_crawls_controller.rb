@@ -33,6 +33,7 @@ class PoiCrawlsController < ApplicationController
         end
         property :menu_items, Array, desc: 'items from the poi menu'
         property :events, Array, desc: 'events from the poi'
+        property :comment_thread, Array, desc: 'associated comment thread with note average'
       end
     end
   end

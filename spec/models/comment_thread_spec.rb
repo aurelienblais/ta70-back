@@ -15,6 +15,7 @@ describe CommentThread do
 
   describe 'Associations' do
     it { should belong_to(:commentable) }
+    it { should have_many(:comments) }
   end
 
   describe 'Methods' do
