@@ -31,8 +31,15 @@ class CommentsController < ApplicationController
   end
 
   api :DELETE, '/comment_thread/:comment_thread_id/comments/:id'
-  returns code: 200
-  returns code: [400, 401, 404]
+  returns code: 200, desc: 'Success'
+  returns code: [400, 401, 404], desc: 'Raised if a params is missing' do
+    property :errors, Hash, desc: 'Error details' do
+      property :status, String, desc: 'Error code'
+      property :title, String, desc: 'Error title'
+      property :detail, Hash, desc: 'Error per field'
+    end
+  end
+
   def destroy
     @comment = Comment.find params[:id]
     authorize @comment, policy_class: CommentPolicy

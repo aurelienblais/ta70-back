@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
   resources :friendships do
     get 'waiting', on: :collection
+  end
   resources :comment_threads do
     resources :comments
   end
