@@ -25,8 +25,7 @@ class CommentThreadsController < ApplicationController
   end
 
   def show
-    render json: CommentSerializer.new(
-      CommentThread.eager_load(comments: :user).find(params[:id]).comments
-    ).serialized_json
+    @comment_thread = CommentThread.eager_load(comments: :user).find(params[:id])
+    render json: CommentThreadSerializer.new(@comment_thread, params: { user: current_user }).serialized_json
   end
 end
