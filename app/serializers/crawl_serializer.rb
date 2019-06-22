@@ -14,4 +14,12 @@ class CrawlSerializer
   attributes :is_owner do |crawl, params|
     params[:current_user] == crawl.user
   end
+
+  attributes :pois do |crawl|
+    CrawlSerializer.new(crawl.pois).as_json
+  end
+
+  attributes :users do |crawl|
+    CrawlSerializer.new(crawl.users).as_json
+  end
 end

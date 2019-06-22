@@ -8,6 +8,6 @@ class CommentThreadSerializer
   end
 
   attribute :comments do |comment_thread|
-    CommentSerializer.new(comment_thread.comments).serialized_json
+    CommentSerializer.new(comment_thread.comments).as_json
   end
 end
