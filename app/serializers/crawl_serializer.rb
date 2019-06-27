@@ -16,7 +16,7 @@ class CrawlSerializer
   end
 
   attributes :pois do |crawl|
-    PoiShortSerializer.new(crawl.pois).as_json
+    CrawlPoiSerializer.new(crawl.poi_crawls).as_json
   end
 
   attributes :users do |crawl|
