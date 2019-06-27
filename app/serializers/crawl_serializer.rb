@@ -20,6 +20,6 @@ class CrawlSerializer
   end
 
   attributes :users do |crawl|
-    UserShortSerializer.new(crawl.users).as_json
+    CrawlUserSerializer.new(crawl.crawl_users).as_json
   end
 end
