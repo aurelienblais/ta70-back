@@ -16,10 +16,10 @@ class CrawlSerializer
   end
 
   attributes :pois do |crawl|
-    CrawlSerializer.new(crawl.pois).as_json
+    PoiShortSerializer.new(crawl.pois).as_json
   end
 
   attributes :users do |crawl|
-    CrawlSerializer.new(crawl.users).as_json
+    UserShortSerializer.new(crawl.users).as_json
   end
 end
