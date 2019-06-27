@@ -15,6 +15,10 @@ class Crawl < ApplicationRecord
   validates_inclusion_of :status, in: STATUS
   validates_presence_of :name
 
+  def self.crawls_for(user)
+    Crawl.eager_load(:crawl_users).where(user: user).or(Crawl.eager_load(:crawl_users).where(crawl_users: { user: user }))
+  end
+
   private
 
   def set_status

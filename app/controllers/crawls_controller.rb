@@ -19,7 +19,7 @@ class CrawlsController < ApplicationController
   end
 
   def index
-    render json: CrawlShortSerializer.new(Crawl.all, params: { current_user: current_user }).serialized_json
+    render json: CrawlShortSerializer.new(Crawl.crawls_for(current_user), params: { current_user: current_user }).serialized_json
   end
 
   api :GET, '/crawls/:id'
