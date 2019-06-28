@@ -23,7 +23,7 @@ class User < ApplicationRecord
   before_validation :set_role
 
   def name
-    "#{firstname.capitalize} #{lastname.capitalize[0]}."
+    "#{firstname.capitalize} #{lastname.capitalize[0..2]}."
   end
 
   ROLES.each do |role|

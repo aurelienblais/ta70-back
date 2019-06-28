@@ -1160,3 +1160,45 @@ OpeningHour.create!([
                       { weekday: 5, opening: '2000-01-01 17:00:00', closing: nil, poi_id: 100 },
                       { weekday: 6, opening: nil, closing: '2000-01-01 23:00:00', poi_id: 100 }
                     ])
+
+(1..50).each do |i|
+  User.create(email: "test#{i}@gmail.com", password: 'azerty', firstname: 'TestUser', lastname: i)
+end
+
+(10..20).each do |i|
+  Friendship.create(user_id: 1, friend_id: i, accepted: true)
+end
+
+(30..40).each do |i|
+  Friendship.create(user_id: i, friend_id: 1)
+end
+
+Crawl.create!([
+                { name: 'Mon super barathon', description: 'Mon super barathon de fin de projet o/', event_date: '2019-06-28 19:00:10', status: 'draft', user_id: 1 }
+              ])
+
+CrawlUser.create!([
+                    { crawl_id: 1, user_id: 10, accepted: true },
+                    { crawl_id: 1, user_id: 15, accepted: true }
+                  ])
+
+PoiCrawl.create!([
+                   { poi_id: 46, crawl_id: 1 },
+                   { poi_id: 47, crawl_id: 1 },
+                   { poi_id: 45, crawl_id: 1 }
+                 ])
+
+Comment.create!([
+                  { comment: 'Vraiment un super bowling', note: 5, user_id: 1, comment_thread_id: 46 },
+                  { comment: "Ouais, c'est un peu moyen je trouve", note: 2, user_id: 2, comment_thread_id: 46 }
+                ])
+MenuItem.create!([
+                   { name: 'Tarif normal', description: 'Du lundi au jeudi', price: 2.8, poi_id: 46 },
+                   { name: 'Tarif normal', description: 'Vendredi et Samedi', price: 6.0, poi_id: 46 },
+                   { name: 'Tarif étudiant', description: 'Du lundi au jeudi', price: 2.8, poi_id: 46 },
+                   { name: 'Tarif étudiant', description: 'Vendredi et Samedi', price: 5.5, poi_id: 46 }
+                 ])
+Event.create!([
+                { name: 'Soirée fluo', description: 'Venez jouer au bowling dans une atmosphère fluo !', event_date: '2019-06-28 12:23:44', poi_id: 46 },
+                { name: 'Soirée billard', description: 'Compétition de billard, nombreux prix a gagner', event_date: '2019-07-05 07:24:43', poi_id: 46 }
+              ])

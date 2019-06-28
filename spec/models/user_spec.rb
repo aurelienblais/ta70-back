@@ -24,7 +24,7 @@ describe User do
 
   describe 'Methods' do
     it 'returns shorten name' do
-      expect(@object.name).to eq "#{@object.firstname} L."
+      expect(@object.name).to eq "#{@object.firstname} Las."
     end
 
     it 'returns user role' do
